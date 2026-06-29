@@ -24,11 +24,12 @@ llama.addEventListener("click", () => {
   soplido.currentTime = 0;
   soplido.play();
 
-  llama.style.animation = "apagar 0.5s forwards";
+  llama.style.animation = "apagar 1s forwards";
 
   setTimeout(() => {
     cancion.currentTime = 0;
     cancion.play();
+    cancion.loop = true;
     overlay.classList.add("hidden");
   }, 1000);
 });
