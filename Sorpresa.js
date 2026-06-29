@@ -33,3 +33,14 @@ llama.addEventListener("click", () => {
     overlay.classList.add("hidden");
   }, 1000);
 });
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    if (!cancion.paused) {
+      cancion.pause();
+    }
+  } else {
+    if (overlay.classList.contains("hidden")) {
+      cancion.play();
+    }
+  }
+});
